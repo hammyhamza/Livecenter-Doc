@@ -52,8 +52,9 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 	// handle the response or error
 }
 ```
-
+#### **Change
  > This methods return an array of all the matches created by the User.
+ 
  > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.html) object.
 
 ##### Load Match Data
@@ -63,7 +64,7 @@ Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchDa
 	// handle the response or error
 }
 ```
-
+#### **Change
  > Details of the match can be accessed by passing the id of the selected match from the list of matches which was return in `getMatchList` function. 
 
 ##### Load Match Goals
