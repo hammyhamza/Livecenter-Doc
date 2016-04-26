@@ -53,18 +53,23 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 }
 ```
 
+ > This methods return an array of all the matches created by the User.
+ > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.html) object.
+
 ##### Load Match Data
 
 ```swift
-Livecenter.sharedInstance.api.getMatchData(matchId: 12) { (matchData, error) -> Void in
+Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchData, error) -> Void in
 	// handle the response or error
 }
 ```
 
+ > Details of the match can be accessed by passing the id of the selected match from the list of matches which was return in `getMatchList` function. 
+
 ##### Load Match Goals
 
 ```swift
-Livecenter.sharedInstance.api.getMatchGoals(matchId: 12) { (goals, error) -> Void in
+Livecenter.sharedInstance.api.getMatchGoals(matchId: selectedMatch.id) { (goals, error) -> Void in
 	// handle the response or error
 }
 ```
@@ -72,7 +77,7 @@ Livecenter.sharedInstance.api.getMatchGoals(matchId: 12) { (goals, error) -> Voi
 ##### Load Match Ticker
 
 ```swift
-Livecenter.sharedInstance.api.getMatchTicker(matchId: 12) { (tickers, error) -> Void in
+Livecenter.sharedInstance.api.getMatchTicker(matchId: selectedMatch.id) { (tickers, error) -> Void in
 	// handle the response or error
 }
 ```
