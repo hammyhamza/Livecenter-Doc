@@ -67,6 +67,7 @@ Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchDa
 #### **Change
  > Details of the match can be accessed by passing the id of the selected match from the list of matches which was return in `getMatchList` function. 
 
+ > matchData is a [MatchData](https://football.newsroom.co/sdk/ios/Classes/MatchData.html) object 
 ##### Load Match Goals
 
 ```swift
