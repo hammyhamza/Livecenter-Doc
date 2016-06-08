@@ -53,9 +53,14 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 }
 ```
 #### **Change
- > This methods return an array of all the matches created by the User.
+ > To access the data of a particular match, first we have to call this method to get all the matches created by the User. 
+ > This method return an array of all the matches created by the User.
  
- > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.html) object.
+ > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.php) object.
+ 
+ > After receiving the response User can select a particular match.
+ 
+ > Now after the selection of the match it's id can be passed to get 'Match Data', 'Match Goals' and 'Match Ticker'.
 
 ##### Load Match Data
 
@@ -65,9 +70,9 @@ Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchDa
 }
 ```
 #### **Change
- > Details of the match can be accessed by passing the id of the selected match from the list of matches which was return in `getMatchList` function. 
+ > Details of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
- > matchData is a [MatchData](https://football.newsroom.co/sdk/ios/Classes/MatchData.html) object.
+ > matchData is a [MatchData](https://football.newsroom.co/sdk/ios/Classes/MatchData.php) object.
  
 ##### Load Match Goals
 
@@ -76,7 +81,11 @@ Livecenter.sharedInstance.api.getMatchGoals(matchId: selectedMatch.id) { (goals,
 	// handle the response or error
 }
 ```
+#### **Change
+ > Goals of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
+ > goals is an array of [Goal](https://football.newsroom.co/sdk/ios/Classes/Goal.php) object.
+ 
 ##### Load Match Ticker
 
 ```swift
@@ -85,6 +94,11 @@ Livecenter.sharedInstance.api.getMatchTicker(matchId: selectedMatch.id) { (ticke
 }
 ```
 
+#### **Change
+ > Tickers of the match can be accessed by passing the id of the selected match which was selected by the User. 
+
+ > tickers is an array of [Ticker](https://football.newsroom.co/sdk/ios/Classes/Ticker.php) object.
+ 
 ## Display Newsroom View
 
 ##### Import the Livecenter kit framework
