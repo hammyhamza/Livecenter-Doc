@@ -16,7 +16,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 ```
 
 #### Step 2: (Get goals of the selected match)
-> Select a match from the list of the matches and pass its id to get match detail data, goals and ticker.
+> Select a match from the list of the matches and pass its id to get match detail Data, Goals or Ticker.
 
 ```swift
 //For example select the first match in the array 
