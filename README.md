@@ -1,5 +1,5 @@
 
-#### Step 1:
+#### Step 1: (Get list of matches created by user)
 ```swift
 //create an array to store list of matches
     var matches = [Match]()
@@ -15,7 +15,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 }
 ```
 
-#### Step 2:
+#### Step 2: (Get goals of a match)
 > Select a match from the list of the matches and pass its id to get match detail data, goals and ticker.
 
 ```swift
