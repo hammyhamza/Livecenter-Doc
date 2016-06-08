@@ -52,7 +52,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 	// handle the response or error
 }
 ```
-#### **Change
+#### **Update
  > To access the data of a particular match, first we have to call this method to get all the matches created by the User. 
  > This method return an array of all the matches created by the User.
  
@@ -69,7 +69,7 @@ Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchDa
 	// handle the response or error
 }
 ```
-#### **Change
+#### **Update
  > Details of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
  > matchData is a [MatchData](https://football.newsroom.co/sdk/ios/Classes/MatchData.php) object.
@@ -81,7 +81,7 @@ Livecenter.sharedInstance.api.getMatchGoals(matchId: selectedMatch.id) { (goals,
 	// handle the response or error
 }
 ```
-#### **Change
+#### **Update
  > Goals of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
  > goals is an array of [Goal](https://football.newsroom.co/sdk/ios/Classes/Goal.php) object.
@@ -94,7 +94,7 @@ Livecenter.sharedInstance.api.getMatchTicker(matchId: selectedMatch.id) { (ticke
 }
 ```
 
-#### **Change
+#### **Update
  > Tickers of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
  > tickers is an array of [Ticker](https://football.newsroom.co/sdk/ios/Classes/Ticker.php) object.
