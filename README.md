@@ -1,19 +1,30 @@
 
 #### Step 1:
 ```swift
+//create an array to store list of matches
+    var matches = [Match]()
+
 Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
-	// handle the response or error
+    
+    //Check whether response is not nil
+    if let listOfMatches = matches{
+    	
+    	//pass the list of matches to the array matches
+        self.matches = listOfMatches
+    }
 }
 ```
- > Call the above method to get the list of matches created by User.
- 
  > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.php) object.
  
 ##### Step 2
 > Select a match from the list of the matches and pass its id to get match detail data, goals and ticker.
 
 ```swift
-Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchData, error) -> Void in
-	// handle the response or error
+//For example select the first match in the array 
+let selectedMatch = matches[0]
+
+//Now get the Goals for the selected Match by passing its id.
+Livecenter.sharedInstance.api.getMatchGoals(matchId: selectedMatch.id) { (goals, error) -> Void in
+    // handle the response or error
 }
 ```
