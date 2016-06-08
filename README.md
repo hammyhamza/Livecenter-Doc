@@ -3,7 +3,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 	// handle the response or error
 }
 ```
-![alt loadMatch](https://raw.githubusercontent.com/hammyhamza/Livecenter-Doc/master/screenshots/loadMatch.png)
+![loadMatch](https://raw.githubusercontent.com/hammyhamza/Livecenter-Doc/master/images/loadMatch.png)
 
 #### **Update
  > To access the data of a particular match, first call this method to get all the matches created by the User. 
@@ -14,6 +14,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
  > After receiving the response User can select a particular match.
  
  > Now after the selection of the match it's id can be passed to get 'Match Data', 'Match Goals' and 'Match Ticker'.
+![segue](https://raw.githubusercontent.com/hammyhamza/Livecenter-Doc/master/images/segue.png)
 
 ##### Load Match Data
 
@@ -23,6 +24,8 @@ Livecenter.sharedInstance.api.getMatchData(matchId: selectedMatch.id) { (matchDa
 }
 ```
 #### **Update
+![loadMatchData](https://raw.githubusercontent.com/hammyhamza/Livecenter-Doc/master/images/matchData.png)
+
  > Details of the match can be accessed by passing the id of the selected match which was selected by the User. 
 
  > matchData is a [MatchData](https://football.newsroom.co/sdk/ios/Classes/MatchData.php) object.
