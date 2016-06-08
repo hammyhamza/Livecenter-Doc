@@ -6,7 +6,7 @@
 
 Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
     
-    //Check whether response is not nil
+    //Check if response is not nil
     if let listOfMatches = matches{
     	
     	//pass the list of matches to the array matches
