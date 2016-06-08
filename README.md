@@ -53,7 +53,7 @@ Livecenter.sharedInstance.api.getMatchList { (matches, error) -> Void in
 }
 ```
 #### **Update
- > To access the data of a particular match, first we have to call this method to get all the matches created by the User. 
+ > To access the data of a particular match, first call this method to get all the matches created by the User. 
  > This method return an array of all the matches created by the User.
  
  > All the object in the array is a [Match](https://football.newsroom.co/sdk/ios/Structs/Match.php) object.
